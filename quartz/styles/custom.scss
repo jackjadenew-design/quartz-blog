@@ -284,11 +284,6 @@ a.internal.tag-link {
   box-shadow: var(--card-shadow);
 }
 
-article.home-page {
-  display: grid;
-  gap: clamp(1.6rem, 3vw, 2.5rem);
-}
-
 .home-hero {
   position: relative;
   padding: clamp(3rem, 6vw, 5rem) 0 clamp(2rem, 4vw, 3.5rem);
@@ -347,8 +342,7 @@ article.home-page {
   color: color-mix(in srgb, var(--darkgray) 88%, var(--secondary) 12%);
 }
 
-.home-page h1 > a[role="anchor"],
-.home-page h2 > a[role="anchor"] {
+.home-page h1 > a[role="anchor"] {
   display: none;
 }
 
@@ -688,10 +682,6 @@ footer {
   .page-listing .section,
   .recent-notes .section {
     padding: 1.1rem 1.15rem;
-  }
-
-  .home-hero h1 {
-    max-width: none;
   }
 
   body[data-slug="index"] .recent-notes .section > .tags {
