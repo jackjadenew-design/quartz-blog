@@ -1,0 +1,97 @@
+<h2>Category Section Treatment</h2>
+<p class="subtitle">The three category cards (AI, Geoscience, Life) are your main navigation. How should they relate to the hero above?</p>
+
+<div class="cards">
+  <div class="card" data-choice="a" onclick="toggleSelect(this)">
+    <div class="card-image" style="background:#f5f7fa; padding:1.5rem 1.2rem;">
+      <div style="font-family:'Avenir Next',sans-serif; color:#18212b;">
+        <!-- Option A: Borderless rows -->
+        <div style="font-size:0.7rem; letter-spacing:0.14em; text-transform:uppercase; color:#6d879d; margin-bottom:1rem;">Sections</div>
+        <div style="display:flex; flex-direction:column; gap:0;">
+          <div style="display:flex; align-items:baseline; gap:1rem; padding:0.9rem 0; border-bottom:1px solid #d8dee6;">
+            <span style="font-size:0.7rem; letter-spacing:0.12em; text-transform:uppercase; color:#6d879d; min-width:5rem;">AI</span>
+            <span style="font-family:Georgia,'Noto Serif SC',serif; font-size:1.1rem; font-weight:600; color:#18212b;">人工智能</span>
+            <span style="font-size:0.82rem; color:#44505e; margin-left:auto;">进入栏目 →</span>
+          </div>
+          <div style="display:flex; align-items:baseline; gap:1rem; padding:0.9rem 0; border-bottom:1px solid #d8dee6;">
+            <span style="font-size:0.7rem; letter-spacing:0.12em; text-transform:uppercase; color:#6d879d; min-width:5rem;">Geoscience</span>
+            <span style="font-family:Georgia,'Noto Serif SC',serif; font-size:1.1rem; font-weight:600; color:#18212b;">地理与遥感</span>
+            <span style="font-size:0.82rem; color:#44505e; margin-left:auto;">进入栏目 →</span>
+          </div>
+          <div style="display:flex; align-items:baseline; gap:1rem; padding:0.9rem 0;">
+            <span style="font-size:0.7rem; letter-spacing:0.12em; text-transform:uppercase; color:#6d879d; min-width:5rem;">Life</span>
+            <span style="font-family:Georgia,'Noto Serif SC',serif; font-size:1.1rem; font-weight:600; color:#18212b;">生活与思考</span>
+            <span style="font-size:0.82rem; color:#44505e; margin-left:auto;">进入栏目 →</span>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="card-body">
+      <h3>A. Index Rows</h3>
+      <p>Flat list with horizontal rules as dividers. Compact, scannable, like a table of contents or journal index. No descriptions — just the essentials. Maximum information density.</p>
+    </div>
+  </div>
+
+  <div class="card" data-choice="b" onclick="toggleSelect(this)">
+    <div class="card-image" style="background:#f5f7fa; padding:1.5rem 1.2rem;">
+      <div style="font-family:'Avenir Next',sans-serif; color:#18212b;">
+        <!-- Option B: Cards but differentiated from hero -->
+        <div style="font-size:0.7rem; letter-spacing:0.14em; text-transform:uppercase; color:#6d879d; margin-bottom:1rem;">Sections</div>
+        <div style="display:grid; grid-template-columns:repeat(3,1fr); gap:0.6rem;">
+          <div style="border:1px solid #d8dee6; border-top:2px solid #285270; padding:1rem; background:white;">
+            <div style="font-size:0.65rem; letter-spacing:0.12em; text-transform:uppercase; color:#6d879d; margin-bottom:0.5rem;">AI</div>
+            <div style="font-family:Georgia,'Noto Serif SC',serif; font-size:1rem; font-weight:600; margin-bottom:0.4rem;">人工智能</div>
+            <div style="font-size:0.72rem; color:#44505e; line-height:1.6;">大模型、智能体与科研工作流</div>
+          </div>
+          <div style="border:1px solid #d8dee6; border-top:2px solid #285270; padding:1rem; background:white;">
+            <div style="font-size:0.65rem; letter-spacing:0.12em; text-transform:uppercase; color:#6d879d; margin-bottom:0.5rem;">Geoscience</div>
+            <div style="font-family:Georgia,'Noto Serif SC',serif; font-size:1rem; font-weight:600; margin-bottom:0.4rem;">地理与遥感</div>
+            <div style="font-size:0.72rem; color:#44505e; line-height:1.6;">遥感、空间数据与地学研究</div>
+          </div>
+          <div style="border:1px solid #d8dee6; border-top:2px solid #285270; padding:1rem; background:white;">
+            <div style="font-size:0.65rem; letter-spacing:0.12em; text-transform:uppercase; color:#6d879d; margin-bottom:0.5rem;">Life</div>
+            <div style="font-family:Georgia,'Noto Serif SC',serif; font-size:1rem; font-weight:600; margin-bottom:0.4rem;">生活与思考</div>
+            <div style="font-size:0.72rem; color:#44505e; line-height:1.6;">阅读、日常与个人反思</div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="card-body">
+      <h3>B. Ruled Cards</h3>
+      <p>Sharp-edged cards with a colored top rule instead of rounded corners. Shorter descriptions. Feels like labeled index cards or a library catalog. Structured but still visual.</p>
+    </div>
+  </div>
+
+  <div class="card" data-choice="c" onclick="toggleSelect(this)">
+    <div class="card-image" style="background:#f5f7fa; padding:1.5rem 1.2rem;">
+      <div style="font-family:'Avenir Next',sans-serif; color:#18212b;">
+        <!-- Option C: Numbered sections, editorial -->
+        <div style="font-size:0.7rem; letter-spacing:0.14em; text-transform:uppercase; color:#6d879d; margin-bottom:1rem;">Sections</div>
+        <div style="display:grid; grid-template-columns:repeat(3,1fr); gap:0.8rem;">
+          <div style="padding:0;">
+            <div style="font-size:2.2rem; font-weight:700; color:rgba(40,82,112,0.12); line-height:1; margin-bottom:0.4rem; font-family:Georgia,serif;">01</div>
+            <div style="font-size:0.65rem; letter-spacing:0.12em; text-transform:uppercase; color:#6d879d; margin-bottom:0.35rem;">AI</div>
+            <div style="font-family:Georgia,'Noto Serif SC',serif; font-size:1rem; font-weight:600; margin-bottom:0.4rem; color:#18212b;">人工智能</div>
+            <div style="font-size:0.72rem; color:#44505e; line-height:1.6;">大模型、智能体与科研工作流</div>
+          </div>
+          <div style="padding:0; border-left:1px solid #d8dee6; padding-left:0.8rem;">
+            <div style="font-size:2.2rem; font-weight:700; color:rgba(40,82,112,0.12); line-height:1; margin-bottom:0.4rem; font-family:Georgia,serif;">02</div>
+            <div style="font-size:0.65rem; letter-spacing:0.12em; text-transform:uppercase; color:#6d879d; margin-bottom:0.35rem;">Geoscience</div>
+            <div style="font-family:Georgia,'Noto Serif SC',serif; font-size:1rem; font-weight:600; margin-bottom:0.4rem; color:#18212b;">地理与遥感</div>
+            <div style="font-size:0.72rem; color:#44505e; line-height:1.6;">遥感、空间数据与地学研究</div>
+          </div>
+          <div style="padding:0; border-left:1px solid #d8dee6; padding-left:0.8rem;">
+            <div style="font-size:2.2rem; font-weight:700; color:rgba(40,82,112,0.12); line-height:1; margin-bottom:0.4rem; font-family:Georgia,serif;">03</div>
+            <div style="font-size:0.65rem; letter-spacing:0.12em; text-transform:uppercase; color:#6d879d; margin-bottom:0.35rem;">Life</div>
+            <div style="font-family:Georgia,'Noto Serif SC',serif; font-size:1rem; font-weight:600; margin-bottom:0.4rem; color:#18212b;">生活与思考</div>
+            <div style="font-size:0.72rem; color:#44505e; line-height:1.6;">阅读、日常与个人反思</div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="card-body">
+      <h3>C. Numbered Columns</h3>
+      <p>Ghosted numbers (01, 02, 03) echo the layered hero treatment. Vertical dividers instead of card borders. No boxes at all — structure through typography and alignment alone.</p>
+    </div>
+  </div>
+</div>

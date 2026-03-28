@@ -69,6 +69,14 @@ export const PageList: QuartzComponent = ({ cfg, fileData, allFiles, limit, sort
       {list.map((page) => {
         const title = page.frontmatter?.title
         const tags = page.frontmatter?.tags ?? []
+        const rawSummary = page.description?.trim()
+        const trimmedSummary =
+          rawSummary && title && rawSummary.startsWith(title)
+            ? rawSummary.slice(title.length).trim()
+            : rawSummary
+        const summary = trimmedSummary
+          ?.replace(/^[-–—:：.\s]+/, "")
+          .replace(/([。！？])\.$/, "$1")
 
         return (
           <li class="section-li">
@@ -82,6 +90,7 @@ export const PageList: QuartzComponent = ({ cfg, fileData, allFiles, limit, sort
                     {title}
                   </a>
                 </h3>
+                {summary && <p class="summary">{summary}</p>}
               </div>
               <ul class="tags">
                 {tags.map((tag) => (

@@ -1,0 +1,101 @@
+<h2>Recent Articles Section</h2>
+<p class="subtitle">The final homepage section. How should the article list feel beneath the hero and numbered categories?</p>
+
+<div class="cards">
+  <div class="card" data-choice="a" onclick="toggleSelect(this)">
+    <div class="card-image" style="background:#f5f7fa; padding:1.5rem 1.2rem;">
+      <div style="font-family:'Avenir Next',sans-serif; color:#18212b;">
+        <div style="font-size:0.7rem; letter-spacing:0.14em; text-transform:uppercase; color:#6d879d; margin-bottom:1.2rem;">最新文章</div>
+        <div style="display:flex; flex-direction:column; gap:0;">
+          <div style="display:flex; align-items:baseline; gap:1rem; padding:0.85rem 0; border-bottom:1px solid #d8dee6;">
+            <span style="font-size:0.75rem; color:#6d879d; min-width:5.5rem; font-variant-numeric:tabular-nums;">2026-03-28</span>
+            <span style="font-family:Georgia,'Noto Serif SC',serif; font-size:1rem; font-weight:600; color:#18212b;">Hello Blog</span>
+            <span style="font-size:0.7rem; color:#6d879d; margin-left:auto; padding:0.15rem 0.5rem; border:1px solid #d8dee6;">#blog</span>
+          </div>
+          <div style="display:flex; align-items:baseline; gap:1rem; padding:0.85rem 0; border-bottom:1px solid #d8dee6;">
+            <span style="font-size:0.75rem; color:#6d879d; min-width:5.5rem; font-variant-numeric:tabular-nums;">2026-03-25</span>
+            <span style="font-family:Georgia,'Noto Serif SC',serif; font-size:1rem; font-weight:600; color:#18212b;">大模型在遥感影像分类中的应用</span>
+            <span style="font-size:0.7rem; color:#6d879d; margin-left:auto; padding:0.15rem 0.5rem; border:1px solid #d8dee6;">#AI</span>
+          </div>
+          <div style="display:flex; align-items:baseline; gap:1rem; padding:0.85rem 0;">
+            <span style="font-size:0.75rem; color:#6d879d; min-width:5.5rem; font-variant-numeric:tabular-nums;">2026-03-20</span>
+            <span style="font-family:Georgia,'Noto Serif SC',serif; font-size:1rem; font-weight:600; color:#18212b;">关于写作的几点反思</span>
+            <span style="font-size:0.7rem; color:#6d879d; margin-left:auto; padding:0.15rem 0.5rem; border:1px solid #d8dee6;">#life</span>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="card-body">
+      <h3>A. Ruled Index</h3>
+      <p>Date-aligned rows with horizontal rules. Tag at the end. Matches the scholarly index aesthetic — like a journal's table of contents. No descriptions, just date + title + tag.</p>
+    </div>
+  </div>
+
+  <div class="card" data-choice="b" onclick="toggleSelect(this)">
+    <div class="card-image" style="background:#f5f7fa; padding:1.5rem 1.2rem;">
+      <div style="font-family:'Avenir Next',sans-serif; color:#18212b;">
+        <div style="font-size:0.7rem; letter-spacing:0.14em; text-transform:uppercase; color:#6d879d; margin-bottom:1.2rem;">最新文章</div>
+        <div style="display:flex; flex-direction:column; gap:1.2rem;">
+          <div>
+            <div style="display:flex; align-items:baseline; gap:0.8rem; margin-bottom:0.3rem;">
+              <span style="font-size:0.72rem; color:#6d879d; font-variant-numeric:tabular-nums;">2026-03-28</span>
+              <span style="font-size:0.68rem; color:#6d879d; padding:0.1rem 0.4rem; border:1px solid #d8dee6;">#blog</span>
+            </div>
+            <div style="font-family:Georgia,'Noto Serif SC',serif; font-size:1.15rem; font-weight:600; color:#18212b; margin-bottom:0.25rem;">Hello Blog</div>
+            <div style="font-size:0.82rem; color:#44505e; line-height:1.7;">这是我的第一篇测试博客文章。</div>
+          </div>
+          <div style="border-top:1px solid #d8dee6; padding-top:1.2rem;">
+            <div style="display:flex; align-items:baseline; gap:0.8rem; margin-bottom:0.3rem;">
+              <span style="font-size:0.72rem; color:#6d879d; font-variant-numeric:tabular-nums;">2026-03-25</span>
+              <span style="font-size:0.68rem; color:#6d879d; padding:0.1rem 0.4rem; border:1px solid #d8dee6;">#AI</span>
+            </div>
+            <div style="font-family:Georgia,'Noto Serif SC',serif; font-size:1.15rem; font-weight:600; color:#18212b; margin-bottom:0.25rem;">大模型在遥感影像分类中的应用</div>
+            <div style="font-size:0.82rem; color:#44505e; line-height:1.7;">探索将大型语言模型与视觉模型结合，用于遥感影像的自动分类...</div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="card-body">
+      <h3>B. Stacked Entries</h3>
+      <p>Each article gets its own block: meta on top, title, then a 1-2 line summary. More breathing room. Separated by thin rules. Better for when articles have meaningful descriptions.</p>
+    </div>
+  </div>
+
+  <div class="card" data-choice="c" onclick="toggleSelect(this)">
+    <div class="card-image" style="background:#f5f7fa; padding:1.5rem 1.2rem;">
+      <div style="font-family:'Avenir Next',sans-serif; color:#18212b;">
+        <div style="display:flex; align-items:baseline; justify-content:space-between; margin-bottom:1.2rem;">
+          <span style="font-size:0.7rem; letter-spacing:0.14em; text-transform:uppercase; color:#6d879d;">最新文章</span>
+          <span style="font-size:2rem; font-weight:700; color:rgba(40,82,112,0.08); font-family:Georgia,serif; line-height:1;">03</span>
+        </div>
+        <div style="display:flex; flex-direction:column; gap:0;">
+          <div style="padding:0.75rem 0; border-bottom:1px solid #d8dee6;">
+            <div style="display:flex; align-items:baseline; justify-content:space-between;">
+              <span style="font-family:Georgia,'Noto Serif SC',serif; font-size:1.05rem; font-weight:600; color:#18212b;">Hello Blog</span>
+              <span style="font-size:0.72rem; color:#6d879d; font-variant-numeric:tabular-nums;">03-28</span>
+            </div>
+            <div style="font-size:0.8rem; color:#44505e; line-height:1.7; margin-top:0.2rem;">这是我的第一篇测试博客文章。</div>
+          </div>
+          <div style="padding:0.75rem 0; border-bottom:1px solid #d8dee6;">
+            <div style="display:flex; align-items:baseline; justify-content:space-between;">
+              <span style="font-family:Georgia,'Noto Serif SC',serif; font-size:1.05rem; font-weight:600; color:#18212b;">大模型在遥感影像分类中的应用</span>
+              <span style="font-size:0.72rem; color:#6d879d; font-variant-numeric:tabular-nums;">03-25</span>
+            </div>
+            <div style="font-size:0.8rem; color:#44505e; line-height:1.7; margin-top:0.2rem;">探索将大型语言模型与视觉模型结合...</div>
+          </div>
+          <div style="padding:0.75rem 0;">
+            <div style="display:flex; align-items:baseline; justify-content:space-between;">
+              <span style="font-family:Georgia,'Noto Serif SC',serif; font-size:1.05rem; font-weight:600; color:#18212b;">关于写作的几点反思</span>
+              <span style="font-size:0.72rem; color:#6d879d; font-variant-numeric:tabular-nums;">03-20</span>
+            </div>
+            <div style="font-size:0.8rem; color:#44505e; line-height:1.7; margin-top:0.2rem;">记录最近重新开始写作后的一些想法...</div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="card-body">
+      <h3>C. Compact with Ghost Count</h3>
+      <p>Title-first rows with short date (month-day) right-aligned. A ghosted article count echoes the hero's year and categories' numbered columns. Brief summaries. Tight but readable.</p>
+    </div>
+  </div>
+</div>

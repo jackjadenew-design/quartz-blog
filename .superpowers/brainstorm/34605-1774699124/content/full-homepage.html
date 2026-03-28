@@ -1,0 +1,398 @@
+<!DOCTYPE html>
+<html lang="zh">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Homepage Mockup — 赵少杰的博客</title>
+<style>
+  * { margin: 0; padding: 0; box-sizing: border-box; }
+
+  :root {
+    --light: #f5f7fa;
+    --lightgray: #d8dee6;
+    --gray: #97a1ac;
+    --darkgray: #44505e;
+    --dark: #18212b;
+    --secondary: #285270;
+    --tertiary: #6d879d;
+    --highlight: rgba(40, 82, 112, 0.08);
+    --titleFont: "Iowan Old Style", "Palatino Linotype", "Noto Serif SC", "Songti SC", serif;
+    --headerFont: "Iowan Old Style", "Palatino Linotype", "Noto Serif SC", "Songti SC", serif;
+    --bodyFont: "Avenir Next", "PingFang SC", "Noto Sans SC", "Hiragino Sans GB", sans-serif;
+  }
+
+  html { background: var(--light); }
+
+  body {
+    font-family: var(--bodyFont);
+    color: var(--darkgray);
+    background:
+      radial-gradient(circle at top, color-mix(in srgb, var(--highlight) 86%, transparent) 0, transparent 34%),
+      linear-gradient(180deg, color-mix(in srgb, var(--light) 96%, var(--secondary) 4%) 0%, var(--light) 30rem);
+    min-height: 100vh;
+  }
+
+  .page {
+    max-width: 960px;
+    margin: 0 auto;
+    padding: 0 clamp(1.25rem, 4vw, 3rem);
+  }
+
+  /* === SIDEBAR HEADER (simplified for mockup) === */
+  .sidebar-mock {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: clamp(2rem, 3vw, 3.5rem) 0 1.5rem;
+    border-bottom: 1px solid color-mix(in srgb, var(--lightgray) 88%, transparent);
+  }
+
+  .sidebar-mock .site-title {
+    font-family: var(--titleFont);
+    font-size: clamp(1.4rem, 1.2rem + 0.6vw, 1.8rem);
+    font-weight: 700;
+    color: var(--dark);
+    letter-spacing: -0.03em;
+    text-decoration: none;
+  }
+
+  .sidebar-mock .controls {
+    display: flex;
+    align-items: center;
+    gap: 0.65rem;
+    padding: 0.35rem;
+    border: 1px solid color-mix(in srgb, var(--lightgray) 74%, var(--secondary) 26%);
+    border-radius: 999px;
+    background: color-mix(in srgb, var(--light) 92%, white 8%);
+  }
+
+  .sidebar-mock .controls .btn {
+    height: 2.1rem;
+    padding: 0 0.8rem;
+    border: none;
+    border-radius: 999px;
+    background: transparent;
+    font-family: var(--bodyFont);
+    font-size: 0.82rem;
+    color: color-mix(in srgb, var(--darkgray) 80%, var(--secondary) 20%);
+    cursor: pointer;
+  }
+
+  .sidebar-mock .controls .btn-icon {
+    width: 2.1rem;
+    padding: 0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 1rem;
+  }
+
+  /* === HERO === */
+  .hero {
+    position: relative;
+    padding: clamp(3rem, 6vw, 5rem) 0 clamp(2rem, 4vw, 3.5rem);
+  }
+
+  .hero-year {
+    position: absolute;
+    right: 0;
+    top: clamp(1.5rem, 4vw, 3rem);
+    font-family: var(--bodyFont);
+    font-size: clamp(5rem, 10vw, 8rem);
+    font-weight: 700;
+    color: color-mix(in srgb, var(--secondary) 6%, transparent);
+    line-height: 1;
+    letter-spacing: -0.04em;
+    user-select: none;
+    pointer-events: none;
+  }
+
+  .hero-eyebrow {
+    font-size: 0.78rem;
+    letter-spacing: 0.14em;
+    text-transform: uppercase;
+    color: var(--tertiary);
+    margin-bottom: 1.2rem;
+  }
+
+  .hero h1 {
+    font-family: var(--titleFont);
+    font-size: clamp(3rem, 2.2rem + 2.5vw, 4.8rem);
+    font-weight: 700;
+    line-height: 0.94;
+    letter-spacing: -0.05em;
+    color: var(--dark);
+    margin-bottom: 1.2rem;
+  }
+
+  .hero-rule {
+    width: 3rem;
+    height: 2px;
+    background: var(--secondary);
+    margin-bottom: 1.2rem;
+  }
+
+  .hero-lead {
+    font-size: clamp(1rem, 0.92rem + 0.3vw, 1.15rem);
+    line-height: 1.95;
+    color: color-mix(in srgb, var(--darkgray) 88%, var(--secondary) 12%);
+    max-width: 36rem;
+  }
+
+  /* === CATEGORIES === */
+  .categories {
+    padding: clamp(2rem, 4vw, 3rem) 0;
+    border-top: 1px solid var(--lightgray);
+  }
+
+  .categories-label {
+    font-size: 0.78rem;
+    letter-spacing: 0.14em;
+    text-transform: uppercase;
+    color: var(--tertiary);
+    margin-bottom: clamp(1.2rem, 2vw, 1.8rem);
+  }
+
+  .category-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 0;
+  }
+
+  .category-col {
+    text-decoration: none;
+    color: inherit;
+    padding-right: clamp(0.8rem, 2vw, 1.5rem);
+    transition: opacity 0.2s ease;
+  }
+
+  .category-col:hover { opacity: 0.7; }
+
+  .category-col + .category-col {
+    border-left: 1px solid var(--lightgray);
+    padding-left: clamp(0.8rem, 2vw, 1.5rem);
+  }
+
+  .category-number {
+    font-family: var(--headerFont);
+    font-size: clamp(1.8rem, 1.5rem + 1vw, 2.4rem);
+    font-weight: 700;
+    color: color-mix(in srgb, var(--secondary) 10%, transparent);
+    line-height: 1;
+    margin-bottom: 0.5rem;
+  }
+
+  .category-tag {
+    font-size: 0.68rem;
+    letter-spacing: 0.12em;
+    text-transform: uppercase;
+    color: var(--tertiary);
+    margin-bottom: 0.4rem;
+  }
+
+  .category-title {
+    font-family: var(--headerFont);
+    font-size: clamp(1.05rem, 0.95rem + 0.3vw, 1.25rem);
+    font-weight: 600;
+    color: var(--dark);
+    margin-bottom: 0.45rem;
+    line-height: 1.2;
+  }
+
+  .category-desc {
+    font-size: 0.82rem;
+    line-height: 1.7;
+    color: var(--darkgray);
+  }
+
+  /* === RECENT ARTICLES === */
+  .recent {
+    padding: clamp(2rem, 4vw, 3rem) 0;
+    border-top: 1px solid var(--lightgray);
+  }
+
+  .recent-label {
+    font-size: 0.78rem;
+    letter-spacing: 0.14em;
+    text-transform: uppercase;
+    color: var(--tertiary);
+    margin-bottom: clamp(0.8rem, 1.5vw, 1.2rem);
+  }
+
+  .recent-list {
+    list-style: none;
+  }
+
+  .recent-row {
+    display: flex;
+    align-items: baseline;
+    gap: 1rem;
+    padding: 0.8rem 0;
+    border-bottom: 1px solid color-mix(in srgb, var(--lightgray) 80%, transparent);
+    text-decoration: none;
+    color: inherit;
+    transition: opacity 0.2s ease;
+  }
+
+  .recent-row:last-child { border-bottom: none; }
+  .recent-row:hover { opacity: 0.7; }
+
+  .recent-date {
+    font-size: 0.78rem;
+    color: var(--tertiary);
+    min-width: 5.5rem;
+    font-variant-numeric: tabular-nums;
+  }
+
+  .recent-title {
+    font-family: var(--headerFont);
+    font-size: 1.02rem;
+    font-weight: 600;
+    color: var(--dark);
+    flex: 1;
+  }
+
+  .recent-tag {
+    font-size: 0.7rem;
+    color: var(--tertiary);
+    padding: 0.12rem 0.5rem;
+    border: 1px solid var(--lightgray);
+  }
+
+  /* === FOOTER === */
+  .footer {
+    padding: clamp(2rem, 3vw, 3rem) 0;
+    border-top: 1px solid var(--lightgray);
+    display: flex;
+    align-items: baseline;
+    justify-content: space-between;
+    font-size: 0.78rem;
+    color: var(--gray);
+  }
+
+  .footer a {
+    color: var(--tertiary);
+    text-decoration: none;
+  }
+
+  .footer a:hover { color: var(--secondary); }
+
+  /* === RESPONSIVE === */
+  @media (max-width: 700px) {
+    .category-grid {
+      grid-template-columns: 1fr;
+      gap: 0;
+    }
+    .category-col + .category-col {
+      border-left: none;
+      padding-left: 0;
+      padding-top: 1.2rem;
+      margin-top: 1.2rem;
+      border-top: 1px solid var(--lightgray);
+    }
+    .category-col { padding-right: 0; }
+    .hero-year { font-size: 4rem; }
+    .recent-tag { display: none; }
+  }
+
+  /* Label for mockup */
+  .mockup-label {
+    position: fixed;
+    top: 0.75rem;
+    right: 0.75rem;
+    font-size: 0.65rem;
+    letter-spacing: 0.1em;
+    text-transform: uppercase;
+    color: var(--gray);
+    background: var(--light);
+    padding: 0.3rem 0.6rem;
+    border: 1px solid var(--lightgray);
+    border-radius: 4px;
+    z-index: 100;
+  }
+</style>
+</head>
+<body>
+  <div class="mockup-label">Homepage Mockup — Full Design</div>
+  <div class="page">
+
+    <!-- Sidebar / Header -->
+    <div class="sidebar-mock">
+      <a class="site-title" href="#">赵少杰的博客</a>
+      <div class="controls">
+        <button class="btn">搜索</button>
+        <button class="btn btn-icon">◑</button>
+      </div>
+    </div>
+
+    <!-- Hero -->
+    <section class="hero">
+      <div class="hero-year">2026</div>
+      <p class="hero-eyebrow">Personal Blog · AI · Geoscience · Life</p>
+      <h1>赵少杰的博客</h1>
+      <div class="hero-rule"></div>
+      <p class="hero-lead">一名研究者的长期写作空间，记录人工智能、地理与遥感科学，以及研究之外的生活与反思。这里更强调完整文章与持续表达，而不是知识库式的碎片整理。</p>
+    </section>
+
+    <!-- Categories -->
+    <section class="categories">
+      <p class="categories-label">Sections</p>
+      <div class="category-grid">
+        <a class="category-col" href="#">
+          <div class="category-number">01</div>
+          <p class="category-tag">AI</p>
+          <p class="category-title">人工智能</p>
+          <p class="category-desc">大模型、智能体与科研工作流</p>
+        </a>
+        <a class="category-col" href="#">
+          <div class="category-number">02</div>
+          <p class="category-tag">Geoscience</p>
+          <p class="category-title">地理与遥感</p>
+          <p class="category-desc">遥感、空间数据与地学研究</p>
+        </a>
+        <a class="category-col" href="#">
+          <div class="category-number">03</div>
+          <p class="category-tag">Life</p>
+          <p class="category-title">生活与思考</p>
+          <p class="category-desc">阅读、日常与个人反思</p>
+        </a>
+      </div>
+    </section>
+
+    <!-- Recent Articles -->
+    <section class="recent">
+      <p class="recent-label">最新文章</p>
+      <ul class="recent-list">
+        <li>
+          <a class="recent-row" href="#">
+            <span class="recent-date">2026-03-28</span>
+            <span class="recent-title">Hello Blog</span>
+            <span class="recent-tag">#blog</span>
+          </a>
+        </li>
+        <li>
+          <a class="recent-row" href="#">
+            <span class="recent-date">2026-03-25</span>
+            <span class="recent-title">大模型在遥感影像分类中的应用</span>
+            <span class="recent-tag">#AI</span>
+          </a>
+        </li>
+        <li>
+          <a class="recent-row" href="#">
+            <span class="recent-date">2026-03-20</span>
+            <span class="recent-title">关于写作的几点反思</span>
+            <span class="recent-tag">#life</span>
+          </a>
+        </li>
+      </ul>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer">
+      <span>© 2026 赵少杰</span>
+      <span><a href="#">GitHub</a> · <a href="#">Google Scholar</a></span>
+    </footer>
+
+  </div>
+</body>
+</html>

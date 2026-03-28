@@ -1,0 +1,12 @@
+{"type":"server-started","port":50870,"host":"127.0.0.1","url_host":"localhost","url":"http://localhost:50870","screen_dir":"/Users/zhaoshaojie/Library/CloudStorage/Nutstore-geo_zhao@126.com/quartz/.superpowers/brainstorm/34605-1774699124/content","state_dir":"/Users/zhaoshaojie/Library/CloudStorage/Nutstore-geo_zhao@126.com/quartz/.superpowers/brainstorm/34605-1774699124/state"}
+{"type":"screen-added","file":"/Users/zhaoshaojie/Library/CloudStorage/Nutstore-geo_zhao@126.com/quartz/.superpowers/brainstorm/34605-1774699124/content/hero-treatment.html"}
+{"type":"screen-updated","file":"/Users/zhaoshaojie/Library/CloudStorage/Nutstore-geo_zhao@126.com/quartz/.superpowers/brainstorm/34605-1774699124/content/hero-treatment.html"}
+{"type":"screen-added","file":"/Users/zhaoshaojie/Library/CloudStorage/Nutstore-geo_zhao@126.com/quartz/.superpowers/brainstorm/34605-1774699124/content/category-grid.html"}
+{"type":"screen-updated","file":"/Users/zhaoshaojie/Library/CloudStorage/Nutstore-geo_zhao@126.com/quartz/.superpowers/brainstorm/34605-1774699124/content/category-grid.html"}
+{"type":"screen-added","file":"/Users/zhaoshaojie/Library/CloudStorage/Nutstore-geo_zhao@126.com/quartz/.superpowers/brainstorm/34605-1774699124/content/recent-articles.html"}
+{"type":"screen-updated","file":"/Users/zhaoshaojie/Library/CloudStorage/Nutstore-geo_zhao@126.com/quartz/.superpowers/brainstorm/34605-1774699124/content/recent-articles.html"}
+{"type":"screen-added","file":"/Users/zhaoshaojie/Library/CloudStorage/Nutstore-geo_zhao@126.com/quartz/.superpowers/brainstorm/34605-1774699124/content/full-homepage.html"}
+{"type":"screen-updated","file":"/Users/zhaoshaojie/Library/CloudStorage/Nutstore-geo_zhao@126.com/quartz/.superpowers/brainstorm/34605-1774699124/content/full-homepage.html"}
+{"type":"screen-added","file":"/Users/zhaoshaojie/Library/CloudStorage/Nutstore-geo_zhao@126.com/quartz/.superpowers/brainstorm/34605-1774699124/content/waiting.html"}
+{"type":"screen-updated","file":"/Users/zhaoshaojie/Library/CloudStorage/Nutstore-geo_zhao@126.com/quartz/.superpowers/brainstorm/34605-1774699124/content/waiting.html"}
+{"type":"server-stopped","reason":"idle timeout"}

@@ -42,22 +42,31 @@ export default ((userOpts?: Partial<Options>) => {
           {pages.slice(0, opts.limit).map((page) => {
             const title = page.frontmatter?.title ?? i18n(cfg.locale).propertyDefaults.title
             const tags = page.frontmatter?.tags ?? []
+            const rawSummary = page.description?.trim()
+            const trimmedSummary =
+              rawSummary && title && rawSummary.startsWith(title)
+                ? rawSummary.slice(title.length).trim()
+                : rawSummary
+            const summary = trimmedSummary
+              ?.replace(/^[-–—:：.\s]+/, "")
+              .replace(/([。！？])\.$/, "$1")
 
             return (
               <li class="recent-li">
                 <div class="section">
+                  {page.dates && (
+                    <p class="meta">
+                      <Date date={getDate(cfg, page)!} locale={cfg.locale} />
+                    </p>
+                  )}
                   <div class="desc">
                     <h3>
                       <a href={resolveRelative(fileData.slug!, page.slug!)} class="internal">
                         {title}
                       </a>
                     </h3>
+                    {summary && <p class="summary">{summary}</p>}
                   </div>
-                  {page.dates && (
-                    <p class="meta">
-                      <Date date={getDate(cfg, page)!} locale={cfg.locale} />
-                    </p>
-                  )}
                   {opts.showTags && (
                     <ul class="tags">
                       {tags.map((tag) => (
