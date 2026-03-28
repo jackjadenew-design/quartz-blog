@@ -275,7 +275,6 @@ a.internal.tag-link {
   background: color-mix(in srgb, var(--highlight) 88%, white 12%);
 }
 
-.section-landing,
 .page-listing .section,
 .recent-notes .section {
   border: 1px solid var(--panel-border);
@@ -419,7 +418,12 @@ a.internal.tag-link {
 }
 
 .section-landing {
-  padding: clamp(1.4rem, 3vw, 2rem);
+  padding: 0;
+  margin-bottom: 1.5rem;
+}
+
+.center:has(article.section-landing) .article-title {
+  display: none;
 }
 
 .section-lead {
@@ -669,14 +673,9 @@ footer {
     max-width: none;
   }
 
-  .section-landing,
   .page-listing .section,
   .recent-notes .section {
     border-radius: 1.25rem;
-  }
-
-  .section-landing {
-    padding: 1.25rem;
   }
 
   .page-listing .section,
