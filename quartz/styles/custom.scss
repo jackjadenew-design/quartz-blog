@@ -507,19 +507,87 @@ li.recent-li {
   margin-top: 0.15rem;
 }
 
-body[data-slug="index"] .page-footer {
-  margin-top: clamp(1.5rem, 3vw, 2.3rem);
-}
-
 body[data-slug="index"] .recent-notes {
-  padding: clamp(1.5rem, 3vw, 2.3rem);
+  padding: clamp(2rem, 4vw, 3rem) 0;
+  border-bottom: 1px solid var(--lightgray);
 }
 
 body[data-slug="index"] .recent-notes > h3 {
-  margin: 0 0 1.15rem;
-  font-size: clamp(1.6rem, 1.42rem + 0.5vw, 1.95rem);
-  line-height: 1.12;
-  letter-spacing: -0.035em;
+  font-size: 0.78rem;
+  font-family: var(--bodyFont);
+  font-weight: 400;
+  letter-spacing: 0.14em;
+  text-transform: uppercase;
+  color: var(--tertiary);
+  margin: 0 0 clamp(0.8rem, 1.5vw, 1.2rem);
+  line-height: 1.4;
+}
+
+body[data-slug="index"] .recent-notes .section {
+  grid-template-columns: 1fr !important;
+  display: flex;
+  align-items: baseline;
+  gap: 1rem;
+  padding: 0.8rem 0;
+  border: none;
+  border-bottom: 1px solid color-mix(in srgb, var(--lightgray) 80%, transparent);
+  border-radius: 0;
+  background: none;
+  box-shadow: none;
+}
+
+body[data-slug="index"] .recent-notes .section:last-child {
+  border-bottom: none;
+}
+
+body[data-slug="index"] .recent-notes .section:hover {
+  transform: none;
+  border-color: color-mix(in srgb, var(--lightgray) 80%, transparent);
+  opacity: 0.7;
+}
+
+body[data-slug="index"] .recent-notes .section > .meta {
+  font-size: 0.78rem;
+  color: var(--tertiary);
+  min-width: 5.5rem;
+  font-variant-numeric: tabular-nums;
+  margin: 0;
+  letter-spacing: 0;
+  text-transform: none;
+}
+
+body[data-slug="index"] .recent-notes .section .desc {
+  flex: 1;
+}
+
+body[data-slug="index"] .recent-notes .section .desc h3 {
+  font-family: var(--headerFont);
+  font-size: 1.02rem;
+  font-weight: 600;
+  color: var(--dark);
+  line-height: 1.3;
+}
+
+body[data-slug="index"] .recent-notes .section .summary {
+  display: none;
+}
+
+body[data-slug="index"] .recent-notes .section > .tags {
+  margin: 0;
+  gap: 0;
+}
+
+body[data-slug="index"] .recent-notes .section > .tags li:not(:first-child) {
+  display: none;
+}
+
+body[data-slug="index"] .recent-notes .section > .tags a.tag-link {
+  font-size: 0.7rem;
+  color: var(--tertiary);
+  padding: 0.12rem 0.5rem;
+  border: 1px solid var(--lightgray);
+  border-radius: 0;
+  background: none;
 }
 
 @media all and (max-width: 700px) {
@@ -597,5 +665,9 @@ body[data-slug="index"] .recent-notes > h3 {
 
   .home-hero h1 {
     max-width: none;
+  }
+
+  body[data-slug="index"] .recent-notes .section > .tags {
+    display: none;
   }
 }
