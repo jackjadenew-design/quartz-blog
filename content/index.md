@@ -10,7 +10,7 @@ cssclasses:
   <p class="home-eyebrow">Personal Blog · AI · Geoscience · Life</p>
   <h1>赵少杰的博客</h1>
   <div class="home-hero-rule"></div>
-  <p class="home-lead">一名研究者的长期写作空间，记录人工智能、地理与遥感科学，以及研究之外的生活与反思。这里更强调完整文章与持续表达，而不是知识库式的碎片整理。</p>
+  <p class="home-lead">我的长期写作空间，记录人工智能、地理与遥感科学，以及研究之外的生活与反思。</p>
 </section>
 
 <section class="home-categories">
