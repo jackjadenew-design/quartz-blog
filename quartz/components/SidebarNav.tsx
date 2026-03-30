@@ -123,33 +123,8 @@ export default ((config: SidebarNavConfig) => {
   margin-top: 0;
 }
 
-@media all and (max-width: 800px) {
-  .sidebar-nav-list {
-    flex-direction: row;
-    gap: 0;
-    overflow-x: auto;
-  }
-
-  .sidebar-nav-item {
-    flex-direction: column;
-    align-items: center;
-    text-align: center;
-    gap: 0.2rem;
-    padding: 0.5rem 0.7rem;
-    min-width: max-content;
-    border-bottom: none;
-    border-right: 1px solid color-mix(in srgb, var(--lightgray) 60%, transparent);
-  }
-
-  .sidebar-nav-list li:last-child .sidebar-nav-item {
-    border-right: none;
-  }
-
-  .sidebar-nav-text {
-    align-items: center;
-  }
-
-  .sidebar-nav-desc {
+@media all and (max-width: 1200px) {
+  .sidebar-nav {
     display: none;
   }
 }
