@@ -40,15 +40,16 @@ export default ((config: SidebarNavConfig) => {
 
   SidebarNav.css = `
 .sidebar-nav {
-  margin-top: 1rem;
+  margin-top: 0.5rem;
 }
 
 .sidebar-nav-label {
   font-size: 0.72rem;
-  letter-spacing: 0.14em;
+  letter-spacing: 0.12em;
   text-transform: uppercase;
-  color: var(--tertiary);
-  margin: 0 0 0.6rem;
+  color: var(--gray);
+  margin: 0 0 0.5rem;
+  font-weight: 400;
 }
 
 .sidebar-nav-list {
@@ -57,52 +58,59 @@ export default ((config: SidebarNavConfig) => {
   padding: 0;
   display: flex;
   flex-direction: column;
-  gap: 0.25rem;
+  gap: 0;
 }
 
 .sidebar-nav-item {
   display: flex;
-  align-items: flex-start;
-  gap: 0.7rem;
-  padding: 0.6rem 0.7rem;
-  border-radius: 0.75rem;
+  align-items: baseline;
+  gap: 0.65rem;
+  padding: 0.55rem 0;
+  border-radius: 0;
+  border-bottom: 1px solid color-mix(in srgb, var(--lightgray) 60%, transparent);
   text-decoration: none;
   color: inherit;
-  transition: background 0.2s ease;
+  transition: opacity 0.2s ease;
+}
+
+.sidebar-nav-list li:last-child .sidebar-nav-item {
+  border-bottom: none;
 }
 
 .sidebar-nav-item:hover {
-  background: color-mix(in srgb, var(--highlight) 80%, white 20%);
+  background: none;
   color: inherit;
+  opacity: 0.6;
 }
 
 .sidebar-nav-number {
   font-family: var(--headerFont);
-  font-size: 1.1rem;
-  font-weight: 700;
-  color: color-mix(in srgb, var(--secondary) 15%, transparent);
+  font-size: 0.82rem;
+  font-weight: 600;
+  color: var(--secondary);
   line-height: 1;
   flex-shrink: 0;
-  margin-top: 0.1rem;
+  opacity: 0.5;
 }
 
 .sidebar-nav-text {
   display: flex;
   flex-direction: column;
   min-width: 0;
+  gap: 0.1rem;
 }
 
 .sidebar-nav-tag {
-  font-size: 0.62rem;
+  font-size: 0.6rem;
   letter-spacing: 0.1em;
   text-transform: uppercase;
-  color: var(--tertiary);
+  color: var(--gray);
   line-height: 1.2;
 }
 
 .sidebar-nav-title {
   font-family: var(--headerFont);
-  font-size: 0.92rem;
+  font-size: 0.9rem;
   font-weight: 600;
   color: var(--dark);
   line-height: 1.3;
@@ -110,15 +118,15 @@ export default ((config: SidebarNavConfig) => {
 
 .sidebar-nav-desc {
   font-size: 0.72rem;
-  color: var(--darkgray);
-  line-height: 1.5;
-  margin-top: 0.1rem;
+  color: var(--gray);
+  line-height: 1.45;
+  margin-top: 0;
 }
 
 @media all and (max-width: 800px) {
   .sidebar-nav-list {
     flex-direction: row;
-    gap: 0.15rem;
+    gap: 0;
     overflow-x: auto;
   }
 
@@ -127,8 +135,14 @@ export default ((config: SidebarNavConfig) => {
     align-items: center;
     text-align: center;
     gap: 0.2rem;
-    padding: 0.5rem 0.6rem;
+    padding: 0.5rem 0.7rem;
     min-width: max-content;
+    border-bottom: none;
+    border-right: 1px solid color-mix(in srgb, var(--lightgray) 60%, transparent);
+  }
+
+  .sidebar-nav-list li:last-child .sidebar-nav-item {
+    border-right: none;
   }
 
   .sidebar-nav-text {
