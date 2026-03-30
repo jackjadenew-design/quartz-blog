@@ -289,20 +289,6 @@ a.internal.tag-link {
   border-bottom: 1px solid var(--lightgray);
 }
 
-.home-hero-year {
-  position: absolute;
-  right: 0;
-  top: clamp(1.5rem, 4vw, 3rem);
-  font-family: var(--bodyFont);
-  font-size: clamp(5rem, 10vw, 8rem);
-  font-weight: 700;
-  color: color-mix(in srgb, var(--secondary) 6%, transparent);
-  line-height: 1;
-  letter-spacing: -0.04em;
-  user-select: none;
-  pointer-events: none;
-}
-
 .home-hero-rule {
   width: 3rem;
   height: 2px;
@@ -345,77 +331,6 @@ a.internal.tag-link {
   display: none;
 }
 
-.home-categories {
-  padding: clamp(2rem, 4vw, 3rem) 0;
-  border-bottom: 1px solid var(--lightgray);
-}
-
-.home-section-label {
-  font-size: 0.78rem;
-  letter-spacing: 0.14em;
-  text-transform: uppercase;
-  color: var(--tertiary);
-  margin: 0 0 clamp(1.2rem, 2vw, 1.8rem);
-}
-
-.home-category-grid {
-  display: grid;
-  grid-template-columns: repeat(3, 1fr);
-  gap: 0;
-}
-
-.home-category-col {
-  display: block;
-  text-decoration: none;
-  color: inherit;
-  padding-right: clamp(0.8rem, 2vw, 1.5rem);
-  transition: opacity 0.2s ease;
-}
-
-.home-category-col:hover {
-  opacity: 0.7;
-  color: inherit;
-}
-
-.home-category-col + .home-category-col {
-  border-left: 1px solid var(--lightgray);
-  padding-left: clamp(0.8rem, 2vw, 1.5rem);
-}
-
-.home-category-number {
-  display: block;
-  font-family: var(--headerFont);
-  font-size: clamp(1.8rem, 1.5rem + 1vw, 2.4rem);
-  font-weight: 700;
-  color: color-mix(in srgb, var(--secondary) 10%, transparent);
-  line-height: 1;
-  margin-bottom: 0.5rem;
-}
-
-.home-category-tag {
-  display: block;
-  font-size: 0.68rem;
-  letter-spacing: 0.12em;
-  text-transform: uppercase;
-  color: var(--tertiary);
-  margin-bottom: 0.4rem;
-}
-
-.home-category-title {
-  margin: 0 0 0.45rem;
-  font-family: var(--headerFont);
-  font-size: clamp(1.05rem, 0.95rem + 0.3vw, 1.25rem);
-  font-weight: 600;
-  color: var(--dark);
-  line-height: 1.2;
-}
-
-.home-category-desc {
-  margin: 0;
-  font-size: 0.82rem;
-  line-height: 1.7;
-  color: var(--darkgray);
-}
 
 .section-landing {
   padding: 0;
@@ -612,24 +527,6 @@ footer {
     & a:hover {
       color: var(--secondary);
     }
-  }
-}
-
-@media all and (max-width: 700px) {
-  .home-category-grid {
-    grid-template-columns: 1fr;
-  }
-
-  .home-category-col {
-    padding-right: 0;
-  }
-
-  .home-category-col + .home-category-col {
-    border-left: none;
-    padding-left: 0;
-    padding-top: 1.2rem;
-    margin-top: 1.2rem;
-    border-top: 1px solid var(--lightgray);
   }
 }
 

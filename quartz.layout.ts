@@ -8,8 +8,8 @@ export const sharedPageComponents: SharedLayout = {
   afterBody: [],
   footer: Component.Footer({
     links: {
-      GitHub: "https://github.com",
-      "Google Scholar": "https://scholar.google.com",
+      GitHub: "https://github.com/jackjadenew-design",
+      "Google Scholar": "https://scholar.google.com/citations?user=FQiiPPoAAAAJ&hl=zh-CN",
     },
   }),
 }
@@ -38,7 +38,7 @@ export const defaultContentPageLayout: PageLayout = {
     Component.ConditionalRender({
       component: Component.RecentNotes({
         title: "最新文章",
-        limit: 5,
+        limit: 10,
         showTags: true,
         linkToMore: false,
         filter: (f) =>
@@ -58,6 +58,34 @@ export const defaultContentPageLayout: PageLayout = {
         },
         { Component: Component.Darkmode() },
       ],
+    }),
+    Component.ConditionalRender({
+      component: Component.SidebarNav({
+        items: [
+          {
+            number: "01",
+            tag: "AI",
+            title: "人工智能",
+            desc: "只是一个用户而已",
+            href: "/AI/",
+          },
+          {
+            number: "02",
+            tag: "Geoscience",
+            title: "地理与遥感",
+            desc: "遥感与地学研究",
+            href: "/Geoscience/",
+          },
+          {
+            number: "03",
+            tag: "Life",
+            title: "生活与思考",
+            desc: "阅读、日常与思考",
+            href: "/Life/",
+          },
+        ],
+      }),
+      condition: (page) => page.fileData.slug === "index",
     }),
   ],
   right: [],
