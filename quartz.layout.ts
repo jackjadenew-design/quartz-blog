@@ -5,7 +5,19 @@ import * as Component from "./quartz/components"
 export const sharedPageComponents: SharedLayout = {
   head: Component.Head(),
   header: [],
-  afterBody: [],
+  afterBody: [
+    Component.ConditionalRender({
+      component: Component.RecentNotes({
+        title: "最新文章",
+        limit: 10,
+        showTags: true,
+        linkToMore: false,
+        filter: (f) =>
+          f.slug !== "index" && !f.slug?.endsWith("/index") && !f.slug?.startsWith("tags/"),
+      }),
+      condition: (page) => page.fileData.slug === "index",
+    }),
+  ],
   footer: Component.Footer({
     links: {
       GitHub: "https://github.com/jackjadenew-design",
@@ -32,19 +44,6 @@ export const defaultContentPageLayout: PageLayout = {
     Component.ConditionalRender({
       component: Component.TagList(),
       condition: (page) => page.fileData.slug !== "index",
-    }),
-  ],
-  afterBody: [
-    Component.ConditionalRender({
-      component: Component.RecentNotes({
-        title: "最新文章",
-        limit: 10,
-        showTags: true,
-        linkToMore: false,
-        filter: (f) =>
-          f.slug !== "index" && !f.slug?.endsWith("/index") && !f.slug?.startsWith("tags/"),
-      }),
-      condition: (page) => page.fileData.slug === "index",
     }),
   ],
   left: [
