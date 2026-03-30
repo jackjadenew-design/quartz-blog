@@ -20,19 +20,19 @@ cssclasses:
       <span class="home-category-number">01</span>
       <span class="home-category-tag">AI</span>
       <p class="home-category-title">人工智能</p>
-      <p class="home-category-desc">大模型、智能体与科研工作流</p>
+      <p class="home-category-desc">只是一个用户而已</p>
     </a>
     <a class="home-category-col" href="./Geoscience/">
       <span class="home-category-number">02</span>
       <span class="home-category-tag">Geoscience</span>
       <p class="home-category-title">地理与遥感</p>
-      <p class="home-category-desc">遥感、空间数据与地学研究</p>
+      <p class="home-category-desc">遥感与地学研究</p>
     </a>
     <a class="home-category-col" href="./Life/">
       <span class="home-category-number">03</span>
       <span class="home-category-tag">Life</span>
       <p class="home-category-title">生活与思考</p>
-      <p class="home-category-desc">阅读、日常与个人反思</p>
+      <p class="home-category-desc">阅读、日常与思考</p>
     </a>
   </div>
 </section>
