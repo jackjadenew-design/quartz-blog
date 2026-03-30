@@ -1,11 +1,17 @@
 ---
-title: "驾驭工程：在智能体优先的世界中运用 Codex"
+title: 驾驭工程：在智能体优先的世界中运用 Codex
 author: Ryan Lopopolo（OpenAI 技术人员）
-date: 2026-02-11
+date:
 source: https://openai.com/index/harness-engineering/
 translated: true
 translation-note: 由 AI 翻译自英文原文，力求忠实原意
-tags: [AI, 工程, Codex, OpenAI, 智能体, 软件开发]
+tags:
+  - AI
+  - 工程
+  - Codex
+  - OpenAI
+  - 智能体
+  - 软件开发
 related: "[[Harness Engineering - Leveraging Codex in an Agent-First World]]"
 ---
 
