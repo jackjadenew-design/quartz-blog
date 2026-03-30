@@ -1,5 +1,6 @@
 import { QuartzComponent, QuartzComponentConstructor, QuartzComponentProps } from "./types"
 import { classNames } from "../util/lang"
+import { pathToRoot } from "../util/path"
 
 interface NavItem {
   number: string
@@ -14,14 +15,15 @@ interface SidebarNavConfig {
 }
 
 export default ((config: SidebarNavConfig) => {
-  const SidebarNav: QuartzComponent = ({ displayClass }: QuartzComponentProps) => {
+  const SidebarNav: QuartzComponent = ({ fileData, displayClass }: QuartzComponentProps) => {
+    const baseDir = pathToRoot(fileData.slug!)
     return (
       <nav class={classNames(displayClass, "sidebar-nav")}>
         <p class="sidebar-nav-label">Sections</p>
         <ul class="sidebar-nav-list">
           {config.items.map((item) => (
             <li>
-              <a class="sidebar-nav-item" href={item.href}>
+              <a class="sidebar-nav-item" href={`${baseDir}/${item.href}`}>
                 <span class="sidebar-nav-number">{item.number}</span>
                 <div class="sidebar-nav-text">
                   <span class="sidebar-nav-tag">{item.tag}</span>
